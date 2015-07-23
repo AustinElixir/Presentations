@@ -1,0 +1,46 @@
+# Erlang OTP
+- fault tolerant
+- scalable
+- high availability
+- ~250 man years
+
+not enough on it's own, you need tools & libraries & design principles
+
+behaviors, building blocks to describe architecture. Design rules. Define a standard way to solve common problems.
+Generic code vs specific code
+
+client / server communication is done with message passing
+
+process skeletons
+
+generic behavior
+callback module
+
+# Messages
+
+- async vs sync
+- OTP generics solve many corner cases with concurrency
+	- race conditions
+	- server restarts
+	- lost messages
+
+# Genservers
+
+- Improve ability to reason about code
+- Easier to maintain
+
+# Supervisors
+
+- Predictable errors and unpredictable
+- Reduces complexity
+- Organized into supervison trees
+- Start children
+- Errors propagate up the tree
+- Can only add OTP behaviors to trees
+
+# Applications
+- Bundle OTP sup trees
+- Start supervisors
+- start/stop API funs
+- standard directory structure
+- resource file: Application.app
